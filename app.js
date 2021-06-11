@@ -58,7 +58,7 @@ const isDraw = () =>{
   })
 }
 
-const placeMark = () =>{
+const placeMark = (cell, currentClass) =>{
   cell.classList.add(currentClass)
 }
 
@@ -76,7 +76,7 @@ const setBoardHoverClass = () =>{
   }
 }
 
-const checkWin = () =>{
+const checkWin = (currentClass) =>{
   return WINNING_COMBINATIONS.some(combination => {
     return combination.every(index => {
       return cellElements[index].classList.contains(currentClass)
